@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void Piramida1(int height, int choice);
+int main()
+{
+int height, choice;
+	cout << "Enter height:";
+	while (!(cin >> height) || (cin.peek() != '\n'))//Провірка на правильність чисел
+	{
+		cin.clear();
+		while (cin.get() != '\n');
+		cout << "Input error! Retry input" << endl;
+	}
+	cout << "Enter choice:";
+	while (!(cin >> choice) || (cin.peek() != '\n'))//Провірка на правильність чисел
+	{
+		cin.clear();
+		while (cin.get() != '\n');
+		cout << "Input error! Retry input" << endl;
+	}
+	switch (choice)
+	{
+	case 1:
+		buildStairs(height, choice);
+		break;
+	case 2:
+		buildPyramide(height, choice);
+		break;
+	default:
+		break;
+	system("pause");
+	return 0;
+}
