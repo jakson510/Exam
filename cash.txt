@@ -10,6 +10,7 @@ struct Nominals
 bool TakeNumber(int number);
 bool IsValid(int number);
 int ConvertToCoins(double number);
+void ShowTrifle(int coins, Nominals &nominals);
 int main()
 {
 
@@ -44,4 +45,27 @@ int ConvertToCoins(double number)
 	cout << "coins " << ++coins << endl;
 
 	return coins;
+}
+void ShowTrifle(int coins, Nominals &nominals)
+{
+while (coins >= 25)
+{
+coins -= 25;
+nominals.c25++;
+}
+while (coins >= 10)
+{
+coins -= 10;
+nominals.c10++;
+}
+while (coins >= 5)
+{
+coins -= 5;
+nominals.c5++;
+}
+while (coins >= 1)
+{
+coins -= 1;
+nominals.c1++;
+}
 }
