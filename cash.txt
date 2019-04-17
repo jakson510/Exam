@@ -13,6 +13,25 @@ int ConvertToCoins(double number);
 void ShowTrifle(int coins, Nominals &nominals);
 int main()
 {
+float number;
+while (true)
+{
+cout << "Enter number:";
+cin >> number;
+if (!TakeNumber(number))
+continue;
+break;
+}
+
+int coins = ConvertToCoins(number);
+
+Nominals nominals;
+ShowTrifle(coins, nominals);
+
+cout << "Coins with 25 nominal: " << nominals.c25 << endl;
+cout << "Coins with 10 nominal: " << nominals.c10 << endl;
+cout << "Coins with 5 nominal: " << nominals.c5 << endl;
+cout << "Coins with 1 nominal: " << nominals.c1 << endl;
 
 system("pause");
 return 0;
