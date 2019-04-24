@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int SumOdd(int* arr);
+int SumEven(int* arr);
+bool IsCorrect(const long long& number);
+void IsValid(int sum);
+void AlgorithmLuhn(long long& number);
+int * FormArr(const long long& number);
+
+int main()
+{
+
+system("pause");
+return 0;
+}
