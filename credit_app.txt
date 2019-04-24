@@ -58,5 +58,29 @@ void IsValid(int sum)
 cout << "Number of your card is " << (sum % 10 == 0 ? "" : "in") << "valid.\n";
 }
 
+void AlgorithmLuhn(long long& number)
+{
+int* digits = FormArr(number);
 
+int sum = 0;
+sum += SumEven(digits);
+sum += SumOdd(digits);
+
+IsValid(sum);
+}
+
+int * FormArr(const long long& number)
+{
+int* digits = new int[16];
+cout << number << endl;
+long long temp = number;
+for (int i = 0; i < 16; i++, temp /= 10)
+{
+digits[i] = temp % 10;
+cout << digits[i];
+}
+cout << endl;
+
+return digits;
+}
 
